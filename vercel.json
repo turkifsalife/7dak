@@ -1,14 +1,8 @@
 {
-  "redirects": [],
-  "headers": [
+  "rewrites": [
     {
       "source": "/(.*)",
-      "headers": [
-        {
-          "key": "x-bypass",
-          "value": "true"
-        }
-      ]
+      "destination": "/"
     }
   ]
 }
