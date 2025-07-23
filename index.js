@@ -10,7 +10,7 @@ app.use(
     onProxyReq: (proxyReq) => {
       proxyReq.removeHeader('x-forwarded-host');
       proxyReq.removeHeader('host');
-    }
+    },
   })
 );
 
