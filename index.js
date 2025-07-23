@@ -5,10 +5,9 @@ const app = express();
 app.use(
   '/',
   createProxyMiddleware({
-    target: 'https://7dak.fun', // Hedef siten
+    target: 'https://7dak.fun',
     changeOrigin: true,
-    onProxyReq: (proxyReq, req, res) => {
-      // Sonsuz döngü yaratabilecek header'ları temizle
+    onProxyReq: (proxyReq) => {
       proxyReq.removeHeader('x-forwarded-host');
       proxyReq.removeHeader('host');
     }
